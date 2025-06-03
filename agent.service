@@ -1,0 +1,16 @@
+[Unit]
+Description=Agent CyberGorad
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/mnt
+ExecStart=/bin/bash /home/mnt/agent_wan_serveo/dist/agent/start.sh
+Restart=always
+RestartSec=5
+Environment="PATH=/home/mnt/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:>
+
+[Install]
+WantedBy=multi-user.target
+
